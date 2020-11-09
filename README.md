@@ -47,6 +47,7 @@ Web-2 | No | 10.0.0.5 via LB
 Web-3 | No | 10.0.0.5 via LB
 ELK | No | 10.0.0.5 via SSH
 
+
 **ELK Configuration**
 Ansible was used to automate configuration of the ELK machine. NO configuration was performed manually, which is advantageous because...
 * This significantly cuts down on labour hours needed for configuration, allowing personnel to focus their attention on more pressing concerns, such as analyzing the logs Filebeat and Metricbeat generate.
