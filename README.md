@@ -41,12 +41,12 @@ Machines within the network can only be accesssed by _Jump-Box_.
 A summary of hte access policies in place can be found in the table below. 
 
 Name | Publicly Accessbile | Allowed IP Addesses 
+-----|---------------------|--------------------
 Jump-Box | Yes | my_personal_IP 
 Web-1 | No | 10.0.0.5 via LB 
 Web-2 | No | 10.0.0.5 via LB 
 Web-3 | No | 10.0.0.5 via LB 
 ELK | No | 10.0.0.5 via SSH 
-
 
 **ELK Configuration**
 Ansible was used to automate configuration of the ELK machine. NO configuration was performed manually, which is advantageous because...
@@ -93,7 +93,8 @@ f67d4d668772        sebp/elk:761        "/usr/local/bin/star…"   11 days ago  
 This ELK server is configured to monitor the following machines:
 * Web-1: 10.0.0.6
 * Web-1: 10.0.0.9
-* Web-1: 10.0.0.8
+* Web-1: 10.0.0.8 
+
 We have installed the following Beats on these machines:
 * Filebeat
 * Metricbeat
@@ -161,7 +162,7 @@ Filebeat Playbook
 * To specify which machines run ELK and which run Filebeat, update the hosts file. 
   * The playbook indcates which group of machines to install the program on, and the hosts file indicates which machines are in that named group. 
 
-  # This is the default ansible 'hosts' file.
+# This is the default ansible 'hosts' file.
 #
 # It should live in /etc/ansible/hosts
 #
@@ -213,8 +214,8 @@ Filebeat Playbook
 
 * Go to http://[your.ELK.VM.external.IP]:5601/app/kibana to make sure that your server is working properly. 
 
-Metricbeat Configuration
-* Metricabeat is configured the same as Filebeat
+**Metricbeat Configuration** 
+* Metricbeat is configured the same as Filebeat
 * Run the metricbeat module's enable docker command
 * Run the metricbeat setup command
 Verify that your playbook works as expected:
