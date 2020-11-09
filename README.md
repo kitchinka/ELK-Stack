@@ -1,7 +1,9 @@
-# ELK-Stack
-**Automated ELK Stack Deployment**
+# Automated ELK Stack Deployment
+
 The files in this repository were used to configure the network depicted below. 
+
 ![DVWA-ELK Network](https://drive.google.com/file/d/1uacveNDT0zj8tn6eg-I0ACCPbBxvRta8/view?usp=sharing)
+
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively,. select portions of the DVWA-ELK Network file may be used to install only certain pieces of it, such as Filebeat. 
 * The following script is the contents of the **install-elk.yml** file
 https://github.com/kitchinka/ELK-Stack/blob/main/Ansible/install-elk.yml
@@ -14,7 +16,8 @@ This document contains the following details:
   * Machines Being Monitored
 * How to Use the Ansible Build
 
-**Description of the Topology**
+# Description of the Topology
+
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D&mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly _available_, in addition to restricting _access_ to the network. 
@@ -32,13 +35,14 @@ Web-2 | DVWA Web server, Docker | 10.0.0.9 | Linux (Ubuntu 18.04-LTS)
 Web-3 | DVWA Web server, Docker | 10.0.0.8 | Linux (Ubuntu 18.04-LTS)
 ELK | Monitoring, ELK stack, Docker | <dynamic external IP> 10.1.0.4 | Linux (Ubuntu 18.04-LTS)
 
-**Access Policies** 
+# Access Policies
+
 The machines on the internal network are not exposed to the public Internet. 
 Only the _Jump-Box_ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 * <my_personal_IP>
 Machines within the network can only be accesssed by _Jump-Box_.
-* Jump-Box (dynamic external; 10.0.0.5) can access the ELK VM
-A summary of hte access policies in place can be found in the table below. 
+* Jump-Box (dynamic external; 10.0.0.5) can access the ELK VM.
+A summary of the access policies in place can be found in the table below. 
 
 Name | Publicly Accessbile | Allowed IP Addesses 
 -----|---------------------|--------------------
@@ -48,7 +52,8 @@ Web-2 | No | 10.0.0.5 via LB
 Web-3 | No | 10.0.0.5 via LB 
 ELK | No | 10.0.0.5 via SSH 
 
-**ELK Configuration**
+# ELK Configuration
+
 Ansible was used to automate configuration of the ELK machine. NO configuration was performed manually, which is advantageous because...
 * This significantly cuts down on labour hours needed for configuration, allowing personnel to focus their attention on more pressing concerns, such as analyzing the logs Filebeat and Metricbeat generate.
 
