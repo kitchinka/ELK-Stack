@@ -57,7 +57,7 @@ ELK | No | 10.0.0.5 via SSH
 Ansible was used to automate configuration of the ELK machine. NO configuration was performed manually, which is advantageous because...
 * This significantly cuts down on labour hours needed for configuration, allowing personnel to focus their attention on more pressing concerns, such as analyzing the logs Filebeat and Metricbeat generate.
 
-The install-elk playbook inplements the following tasks:
+The install-elk playbook implements the following tasks:
 
 * Install Docker
 * Install Python3-pip
@@ -96,7 +96,7 @@ azadmin@ELK:~$ sudo docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                                                              NAMES
 f67d4d668772        sebp/elk:761        "/usr/local/bin/star…"   11 days ago         Up 10 minutes       0.0.0.0:5044->5044/tcp, 0.0.0.0:5601->5601/tcp, 0.0.0.0:9200->9200/tcp, 9300/tcp   elk
 
-**Target Machines & Beats**
+# Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
 * Web-1: 10.0.0.6
@@ -112,7 +112,7 @@ These Beats allow us to collect the following information from each machine:
 * Filebeat collects log events from log files or specified locations, then forwards these events to Elasticsearch or Logstash for indexing.
 * Metricbeat collects metrics and statistics from the OS and services running on the server. These metrics are forwarded to Elasticsearch or Logstash. 
 
-**Using the Playbook** 
+# Using the Playbook
 
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
