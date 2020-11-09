@@ -23,6 +23,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs fore
 * Filebeat collects log events from log files or specified locations, then forwards these events to Elasticsearch or Logstash for indexing. 
 * Metricbeat collects metrics and statistics from the OS and services running on the server. These metrics are forwarded to Elasticsearch or Logstash. 
 The configuration details of each machine may be found below. 
+
 Name | Function | IP Addess | Operating System
 -----|----------|-----------|-----------------
 Jump-Box | Gateway, Ansible, Docker | <dynamic external IP> 10.0.0.05 | Linux (Ubuntu 18.04-LTS)
@@ -38,6 +39,7 @@ Only the _Jump-Box_ machine can accept connections from the Internet. Access to 
 Machines within the network can only be accesssed by _Jump-Box_.
 * Jump-Box (dynamic external; 10.0.0.5) can access the ELK VM
 A summary of hte access policies in place can be found in the table below. 
+
 Name | Publicly Accessbile | Allowed IP Addesses
 Jump-Box | Yes | my_personal_IP
 Web-1 | No | 10.0.0.5 via LB
