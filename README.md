@@ -40,12 +40,12 @@ Machines within the network can only be accesssed by _Jump-Box_.
 * Jump-Box (dynamic external; 10.0.0.5) can access the ELK VM
 A summary of hte access policies in place can be found in the table below. 
 
-Name | Publicly Accessbile | Allowed IP Addesses
-Jump-Box | Yes | my_personal_IP
-Web-1 | No | 10.0.0.5 via LB
-Web-2 | No | 10.0.0.5 via LB
-Web-3 | No | 10.0.0.5 via LB
-ELK | No | 10.0.0.5 via SSH
+Name | Publicly Accessbile | Allowed IP Addesses 
+Jump-Box | Yes | my_personal_IP 
+Web-1 | No | 10.0.0.5 via LB 
+Web-2 | No | 10.0.0.5 via LB 
+Web-3 | No | 10.0.0.5 via LB 
+ELK | No | 10.0.0.5 via SSH 
 
 
 **ELK Configuration**
