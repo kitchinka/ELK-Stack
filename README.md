@@ -104,8 +104,8 @@ These Beats allow us to collect the following information from each machine:
 * Filebeat collects log events from log files or specified locations, then forwards these events to Elasticsearch or Logstash for indexing.
 * Metricbeat collects metrics and statistics from the OS and services running on the server. These metrics are forwarded to Elasticsearch or Logstash. 
 
-**Using the Playbook**
-In order to use the pjlaybook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
+**Using the Playbook** 
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 Open a tertminal and SSH into your Jump-Box
   ssh azadmin@[Jump-Box-external-IP]
