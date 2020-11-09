@@ -15,7 +15,7 @@ This document contains the following details:
 * How to Use the Ansible Build
 
 **Description of the Topology**
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D&mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly _available_, in addition to restricting _access_ to the network. 
 * Load balancers protect the availability of systems by distributing service requests across a network rather than overloading a single server. The advantage of a jump box is that it serves as a type of DMZ, restricting access to machines on the internal network by serving as a gateway. 
@@ -53,11 +53,13 @@ Ansible was used to automate configuration of the ELK machine. NO configuration 
 * This significantly cuts down on labour hours needed for configuration, allowing personnel to focus their attention on more pressing concerns, such as analyzing the logs Filebeat and Metricbeat generate.
 
 The install-elk playbook inplements the following tasks:
+
 * Install Docker
 * Install Python3-pip
 * Install Docker module
 * Increase virtual memory
 * Download and launch Docker ELK container image
+
 The following screenshots display the result of successful installation of ELK and of running docker ps after successfully configuring the ELK instance.
 
 Successful installation:
@@ -90,6 +92,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 f67d4d668772        sebp/elk:761        "/usr/local/bin/star…"   11 days ago         Up 10 minutes       0.0.0.0:5044->5044/tcp, 0.0.0.0:5601->5601/tcp, 0.0.0.0:9200->9200/tcp, 9300/tcp   elk
 
 **Target Machines & Beats**
+
 This ELK server is configured to monitor the following machines:
 * Web-1: 10.0.0.6
 * Web-1: 10.0.0.9
@@ -105,18 +108,22 @@ These Beats allow us to collect the following information from each machine:
 * Metricbeat collects metrics and statistics from the OS and services running on the server. These metrics are forwarded to Elasticsearch or Logstash. 
 
 **Using the Playbook** 
+
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 Open a tertminal and SSH into your Jump-Box
-  ssh azadmin@[Jump-Box-external-IP]
+- ssh azadmin@[Jump-Box-external-IP]
+
 Start the Ansible container
-  sudo docker start [your-container-name]
-  Hint: If you don't know your container's name, use sudo docker container list -a 
+- sudo docker start [your-container-name]
+- Hint: If you don't know your container's name, use sudo docker container list -a 
+
 Use the Docker command to attach to your Ansible container
-  sudo docker attach [your-container-name]
+- sudo docker attach [your-container-name]
   * Copy the filebeat-config.yml file to /etc/ansible/files
   curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
   * Update the filebeat-config.yml file to include: nano filebeat-config.yml
+  
   Scroll to line #1106 and replace the IP address with the IP address of your ELK machine.
 output.elasticsearch:
 hosts: ["10.1.0.4:9200"]
