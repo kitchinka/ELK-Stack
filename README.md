@@ -170,59 +170,9 @@ Filebeat Playbook
   - name: start filebeat service
     command: sudo service filebeat start
 
-* The filebeat-playbook.yml file indicates which machine or group of machines install and launch filebeat in the hosts line. To change this:  nano /etc/ansible/roles/filebeat-playbook.yml and edit the [hosts] line
+* The filebeat-playbook.yml file indicates which machine or group of machines install and launch filebeat in the hosts line. To change this:  nano /etc/ansible/roles/filebeat-playbook.yml and edit the [hosts](https://github.com/kitchinka/ELK-Stack/blob/main/Ansible/hosts.txt) line
 * To specify which machines run ELK and which run Filebeat, update the hosts file. 
   * The playbook indcates which group of machines to install the program on, and the hosts file indicates which machines are in that named group. 
-
-# This is the default ansible 'hosts' file.
-#
-# It should live in /etc/ansible/hosts
-#
-#   - Comments begin with the '#' character
-#   - Blank lines are ignored
-#   - Groups of hosts are delimited by [header] elements
-#   - You can enter hostnames or ip addresses
-#   - A hostname/ip can be a member of multiple groups
-
-# Ex 1: Ungrouped hosts, specify before any group headers.
-
-## green.example.com
-## blue.example.com
-## 192.168.100.1
-## 192.168.100.10
-
-# Ex 2: A collection of hosts belonging to the 'webservers' group
-
-[webservers]
-## alpha.example.org
-## beta.example.org
-## 1992.168.1.100
-## 192.168.1.110
-10.0.0.6 ansible_python_interpreter=/usr/bin/python3
-10.0.0.9 ansible_python_interpreter=/usr/bin/python3
-10.0.0.8 ansible_python_interpreter=/usr/bin/python3
-
-[elk]
-10.1.0.4 ansible_python_interpreter=/usr/bin/python3
-
-# If you have multiple hosts following a pattern you can specify
-# them like this:
-
-## www[001:006].example.com
-
-# Ex 3: A collection of database servers in the 'dbservers' group
-
-## [dbservers]
-##
-## db01.intranet.mydomain.net
-## db02.intranet.mydomain.net
-## 10.25.1.56
-## 10.25.1.57
-
-# Here's another example of host ranges, this time there are no
-# leading 0s:
-
-## db-[99:101]-node.example.com
 
 * Go to http://[your.ELK.VM.external.IP]:5601/app/kibana to make sure that your server is working properly. 
 
